@@ -5,6 +5,6 @@
 <p>タスク名<%= @tasks.content %></p>
 
 
-<%= link_to '一覧に戻る', tasks_path %>
-<%= link_to '編集する', edit_task_path(@tasks) %>
-<%= link_to 'タスク削除する', @tasks, method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>
+
+<%= link_to '編集する', edit_task_path(@tasks), class: 'btn btn-default' %>
+<%= link_to 'タスク削除する', @tasks, method: :delete, data: { confirm: '本当に削除してよろしいですか？' }, class: 'btn btn-danger' %>
