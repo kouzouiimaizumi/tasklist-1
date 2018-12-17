@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-    before_action :require_user_logged_in, only: [:index, :show]
+    before_action :require_user_logged_in, only: [:index, :show,:create]
     
   def index
     @users = User.all.page(params[:page])
@@ -7,7 +7,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @tasks = @user.microposts.order('created_at DESC').page(params[:page])
+    @tasks = @user.tasks.order('created_at DESC').page(params[:page])
     counts(@user)
   end
 
