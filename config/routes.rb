@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'toppages#index'
+  root to: 'tasks#index'
   get 'toppages/index'
   # 以下はresources :usersに内包されている
   get 'users/index'
